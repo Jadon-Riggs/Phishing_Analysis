@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+   <body>
+
+   <br>
+   <h1>Phishing Dataset</h1>
+   <h4>ID: {{row_id}}</h4>
+      <table border = 1>
+         <thead>
+            <td>id</td>
+            <td>Result</td>
+            <td>having_IP_Address </td>
+            <td>URL_Length</td>
+            <td>Shortining_Service</td>
+            <td>having_At_Symbol</td>
+            <td>double_slash_redirecting </td>
+            <td>Prefix_Suffix</td>
+            <td>having_Sub_Domain</td>
+            <td>SSLFinal_State</td>
+            <td>Domain_registration_length </td>
+            <td>Favicon</td>
+            <td>port</td>
+            <td>HTTPS_token</td>
+            <td>Request_URL </td>
+            <td>URL_of_Anchor</td>
+            <td>Links_in_tags</td>
+            <td>SFH</td>
+            <td>Submitting_to_email </td>
+            <td>Abnormal_URL</td>
+            <td>Redirect</td>
+            <td>on_mouseover</td>
+            <td>RightClick </td>
+            <td>popUpWindo</td>
+            <td>Iframe</td>
+            <td>age_of_domain</td>
+            <td>DNSRecord </td>
+            <td>web_traffic</td>
+            <td>Page_Rank</td>
+            <td>Google_Index</td>
+            <td>Links_pointing_to_page </td>
+            <td>Statistical_Report</td>
+
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["id"]}}</td>
+               <td>{{row["Result"]}}</td>
+               <td> {{ row["having_IP_Address"]}}</td>
+               <td>{{row['URL_Length']}}</td>
+               <td>{{row["Shortining_Service"]}}</td>
+               <td>{{row["having_At_Symbol"]}}</td>
+               <td> {{ row["double_slash_redirecting"]}}</td>
+               <td>{{row['Prefix_Suffix']}}</td>
+               <td>{{row["having_Sub_Domain"]}}</td>
+               <td>{{row["SSLFinal_State"]}}</td>
+               <td> {{ row["Domain_registeration_length"]}}</td>
+               <td>{{row['Favicon']}}</td>
+               <td>{{row["port"]}}</td>
+               <td>{{row["HTTPS_token"]}}</td>
+               <td> {{ row["Request_URL"]}}</td>
+               <td>{{row['URL_of_Anchor']}}</td>
+               <td>{{row["Links_in_tags"]}}</td>
+               <td>{{row["SFH"]}}</td>
+               <td> {{ row["Submitting_to_email"]}}</td>
+               <td>{{row['Abnormal_URL']}}</td>
+
+                <td>{{row['Redirect']}}</td>
+               <td>{{row["on_mouseover"]}}</td>
+               <td>{{row["RightClick"]}}</td>
+               <td> {{ row["popUpWidnow"]}}</td>
+               <td>{{row['Iframe']}}</td>
+               <td>{{row["age_of_domain"]}}</td>
+               <td>{{row["DNSRecord"]}}</td>
+               <td> {{ row["web_traffic"]}}</td>
+               <td>{{row['Page_Rank']}}</td>
+
+               <td>{{row["Google_Index"]}}</td>
+               <td>{{row["Links_pointing_to_page"]}}</td>
+               <td> {{ row["Statistical_Report"]}}</td>
+
+            </tr>
+         {% endfor %}
+      </table>
+
+      <a href = "/">Go back to home page</a>
+   </body>
+</html>
